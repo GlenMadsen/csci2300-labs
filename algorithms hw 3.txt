@@ -1,0 +1,42 @@
+Q1. (10 points) Is 4$^{1536}$ ≡ 9$^{4824}$ mod35? 
+Show all work to support your answer. Hint: 35 is not a prime so you cannot apply Fermat's little theorem directly. However, 35 is a product of primes 
+and you can apply the theorem to those prime factors. You can also use modular exponentiation approach (but show all steps).
+Part 1:\\
+4%35 = 4\\
+(4$^2$)%35 = 16\\
+(4$^3$)%35 = (16*4)%35 = 29\\
+(4$^4$)%35 = (4$^3$*4)%35 = (29*4)%35 = 11\\
+(4$^5$)%35 = (4$^4$*4)%35 = (11*4)%35 = 9\\
+(4$^6$)%35 = (4$^5$*5)%35 = (9*4)%35 = 1 ***\\
+(4$^6$)%35 = 1, so, 4^6 * 4$^{1530}$\\
+Continue this by diving 1536/6 = 256 exactly. so we can simplify it to 1$^{256}$ = 1. So 4$^{1536}$ mod 35 = 1\\
+Part 2, 9$^{4824}$ mod35:\\
+(9$^1$)%35 = 9\\
+(9$^2$)%35 = (9*9)%35 = 81%35 = 11\\
+(9$^3$)%35 = (9$^2$*9)%35 = (11*9)%35 = 29\\
+(9$^4$)%35 = (9$^3$*9)%35 = (29*9)%35 = 16\\
+(9$^5$)%35 = (9$^4$*9)%35 = (16*9)%35 = 4\\
+(9$^6$)%35 = (9$^5$*9)%35 = (4*9)%35 = 36%35 = 1 ***\\
+(9$^6$)%35 = 1, so, we divide 4824/9 and get 536 exactly.\\
+So we can simpify 9$^{4824}$ mod35 to 1$^{536}$ = 1. so 9$^{4824}$ mod35 = 1 \\
+1 = 1 so they are equal. \\
+
+
+Q2. (10 points) Solve x^86 ≡ 6  mod29, i.e., find the value x for which the equation is true. Hint: You can use Fermat's little theorem.
+
+
+Q3. (10 points) Prove that gcd(Fn+1,Fn)=1, for n$\geq$1, where $F_n$ is the n-th Fibonacci element. \\
+Base Case: gcd($F_{n+1}$,$F_n$)=1 for n = 1 $\rightarrow$ gcd(2,1) = 2-1 = 1. gcd = 1, \\
+Induction Step: We substitute (n+1) for n resulting in $\rightarrow$ gcd(F_{n+1+1},F(n+1) = 1. \\ 
+gcd($F_{n+2}$,$F_{n+1}$) = 1 \\
+$F_{n+2}$ = $F_{n+1}$ + $F_{n}$ Because of the definition of the Fibonacci sequence. \\
+gcd($F_{n+1}$+$F_{n}$, $F_{n+1}$) \\
+Eulers: \\
+gcd($F_{n+1}$+$F_{n}$, $F_{n+1}$) = $F_{n+1}$+$F_{n}$-$F_{n+1}$ = F(n). $F_n$ is smaller than $F_{n+1}$ since $F_{n+1}$ = $F_{n-1}$+$F_{n}$ and $F_{n-1}$ is non-zero) so we continue Euclids with new numbers. \\
+gcd($F_{n+1}$,$F_n$) which we know by the base case is 1. \\
+So the blah blah blah its complete andgcd($F_{n+1}$,$F_n$) = 1, for n$\geq$1. \\
+
+
+Q4. (10 points) Assume that the cost to multiply a n-bit integer with a m-bit integer is O(nm). Given integers x and y with n-bits and m-bits, respectively, 
+give an efficient algorithm to compute xy. Show that the method is correct, and analyze its running time.
+Same as Lab but with run time analysis?
